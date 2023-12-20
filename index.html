@@ -11,24 +11,25 @@
 <body>
 
     <div class="container py-5 w-75">
-
+        <h1 class="text-center text-decoration-underline ">Product Mangment System</h1>
         <label for="pname">Product Name : </label>
         <input type="text" id="pname"class="form-control mb-3 " >
        
         <label for="pprice">Product Price : </label>
         <input type="text" id="pprice"class="form-control mb-3" >
-       
+        <span class="text-danger d-none mb-3 fw-bold fs-6" id="inv-price">Please Insert Price Between 1000-10000</span>
+
         <label for="pcategory">Product Category : </label>
-        <input type="text" id="pcategory"class="form-control mb-3" >
-       
-        <label for="pdesc">Product Descreption : </label>
+        <input type="text" id="pcategory"class="form-control mb-3 " >
+       <span class="text-danger d-none  fw-bold fs-6" id="inv-categ">Invailed Category Name</span>
+        
+       <label for="pdesc">Product Descreption : </label>
         <textarea type="text" id="pdesc"class="form-control mb-3"></textarea>   
 
         <button id="addbtn" onclick="addproduct()" class="btn btn-info"> ADD PRODUCT</button>
         <button id="updatebtn" onclick="updateProduct()"  class="btn btn-info d-none "> Update PRODUCT</button>
 
-        <input type="text" id="psearch"class="form-control my-3" placeholder="Search By Name" >
-
+        <input type="text" oninput="searchProduct(this.value)" id="searchProduct"class="form-control my-3 w-75" placeholder="Search By Name" >
 
     </div>
     <div class="container w-75">
