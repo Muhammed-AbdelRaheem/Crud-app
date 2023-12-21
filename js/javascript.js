@@ -39,7 +39,7 @@ function addproduct() {
             }
             productList.push(product);
             updateLocalStorge();
-                        console.log(productList);
+                console.log(productList);
             displayProduct(productList);
             clear();
         }
@@ -112,6 +112,8 @@ function setformbtn(i) {
 }
 
 function updateProduct(i) {
+   if( validateProductPrice() == true && validateProductdesc() == true && validateProductCateg() == true)
+   {
     product = {
         name: productname.value,
         price: productprice.value,
@@ -127,6 +129,9 @@ function updateProduct(i) {
     addBtn.classList.remove("d-none")
     updateBtn.classList.add("d-none")
     clear();
+   }   
+   
+    
 
 }
 
